@@ -12,7 +12,7 @@ const Modal = ({ children, customClass, show, closeCallback }) => (
         <i className="fas fa-times"></i>
       </button>
     </div>
-  </div>
+  </div> 
 );
 
 Modal.propTypes = {
