@@ -10,7 +10,7 @@ import './App.css';
 class App extends Component {
   state = {
     showModal: false,
-    selected: ''
+    formType: ''
   }
 
   toggleModal = () => {
@@ -24,13 +24,13 @@ class App extends Component {
       <div className="app">
         <button className="modal_opener" onClick={() => {
           this.toggleModal();
-          this.setState({selected:'addNew'})
+          this.setState({formType:'addNew'})
         }}>
           Add New <span role="img" aria-label="emoji">😛</span>
         </button>
         <button className="modal_opener" onClick={() =>{
           this.toggleModal()
-          this.setState({selected:'products'})
+          this.setState({formType:'products'})
           }}>
           Products <span role="img" aria-label="emoji">😛</span>
         </button>
@@ -42,8 +42,8 @@ class App extends Component {
         >
           <>
           {
-            this.state.selected === 'addNew' ? <MemberForm/> 
-            : this.state.selected === 'products' ? <ProductsFrom/> 
+            this.state.formType === 'addNew' ? <MemberForm/> 
+            : this.state.formType === 'products' ? <ProductsFrom/> 
             : null
           }
             {/* <h2>Told Ya!</h2>
